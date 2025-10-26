@@ -15,7 +15,6 @@ import {
   PopoverTrigger,
 } from '../../popover';
 import { cn } from '../../../../lib/utils';
-import type { ComponentProps } from 'react';
 
 // Simple logo component for the navbar
 const Logo = (props: React.SVGAttributes<SVGElement>) => {

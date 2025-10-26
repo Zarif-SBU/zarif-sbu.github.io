@@ -39,7 +39,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
-import type { ComponentProps } from 'react';
+
 // Simple logo component for the navbar
 const Logo = (props: React.SVGAttributes<SVGElement>) => {
   return (
@@ -176,7 +176,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
         )}
         {...props}
       >
-        <div className="container mx-auto flex h-16 max-w-screen-2xl items-center justify-between gap-4">
+        <div className="container mx-auto flex h-24 max-w-screen-2xl items-center justify-between gap-4">
           {/* Left side */}
           <div className="flex items-center gap-2 "> {/* Logo can be added here ml-auto to align to right */}
             {/* Mobile menu trigger */}
@@ -223,28 +223,28 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
                   <NavigationMenuList className="gap-1">
                     {navigationLinks.map((link, index) => (
                       <NavigationMenuItem key={index}>
-<NavigationMenuLink
-  href={link.href}
-  onClick={(e) => {
-    e.preventDefault();
-    setActiveLink(link.label);
-  }}
-  className={cn(
-    // Base style
-    'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background m-5 px-4 py-2 text-lg font-medium transition-colors cursor-pointer relative',
-    // Hover & focus color
-    'hover:text-accent-foreground focus:text-accent-foreground focus:outline-none',
-    // Animated underline effect
-    'before:absolute before:bottom-0 before:left-0 before:right-0 before:h-0.5 before:bg-primary before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100',
-    // Active link underline visible
-    activeLink === link.label
-      ? 'before:scale-x-100 text-primary'
-      : 'text-foreground'
-  )}
-  data-active={activeLink === link.label}
->
-  {link.label}
-</NavigationMenuLink>
+                        <NavigationMenuLink
+                          href={link.href}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            setActiveLink(link.label);
+                          }}
+                          className={cn(
+                            // Base style
+                            'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background m-5 px-4 py-2 text-lg font-medium transition-colors cursor-pointer relative',
+                            // Hover & focus color
+                            'hover:text-accent-foreground focus:text-accent-foreground focus:outline-none',
+                            // Animated underline effect
+                            'before:absolute before:bottom-0 before:left-0 before:right-0 before:h-0.5 before:bg-secondary before:scale-x-0 before:transition-transform before:duration-300 hover:before:scale-x-100',
+                            // Active link underline visible
+                            activeLink === link.label
+                              ? 'before:scale-x-100 text-secondary'
+                              : 'text-foreground'
+                          )}
+                          data-active={activeLink === link.label}
+                          >
+                          {link.label}
+                        </NavigationMenuLink>
                       </NavigationMenuItem>
                     ))}
                   </NavigationMenuList>
