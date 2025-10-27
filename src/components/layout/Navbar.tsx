@@ -1,32 +1,8 @@
-// import {
-//   NavigationMenu,
-//   NavigationMenuContent,
-//   NavigationMenuIndicator,
-//   NavigationMenuItem,
-//   NavigationMenuLink,
-//   NavigationMenuList,
-//   NavigationMenuTrigger,
-//   NavigationMenuViewport,
-// } from "../ui/navigation-menu";// npx shadcn@latest add
-// export function Navbar() {
-//     return <div className="bg-background text-foreground">
-//     <NavigationMenu>
-//         <NavigationMenuList>
-//             <NavigationMenuItem>
-//             <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
-//             <NavigationMenuContent>
-//                 <NavigationMenuLink>Link</NavigationMenuLink>
-//             </NavigationMenuContent>
-//             </NavigationMenuItem>
-//         </NavigationMenuList>
-//     </NavigationMenu>
-// </div>;
-// }
-
 'use client';
 import * as React from 'react';
 import { useEffect, useState, useRef } from 'react';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -39,6 +15,7 @@ import {
   PopoverTrigger,
 } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
+import {Link, useLocation} from 'react-router-dom';
 
 // Simple logo component for the navbar
 const Logo = (props: React.SVGAttributes<SVGElement>) => {
@@ -114,11 +91,12 @@ export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
 }
 // Default navigation links
 const defaultNavigationLinks: NavbarNavItem[] = [
-  { href: '#', label: 'About Me', active: true },
-  { href: '#', label: 'Resume' },
-  { href: '#', label: 'Projects' },
-  { href: '#', label: 'Contact' },
+  { href: '/about', label: 'About Me', active: true },
+  { href: '/resume', label: 'Resumes' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/contact', label: 'Contact' },
 ];
+
 export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
   (
     {
@@ -136,11 +114,21 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
     },
     ref
   ) => {
+    const {pathname} = useLocation();
     const [isMobile, setIsMobile] = useState(false);
     const containerRef = useRef<HTMLElement>(null);
-    const [activeLink, setActiveLink] = useState(
-        navigationLinks.find((link) => link.active)?.label || navigationLinks[0].label
-    );
+    const [activeLink, setActiveLink] = useState<string>("");
+
+    useEffect(() => {
+      // Find the link that matches the current path
+      const matchingLink =
+        navigationLinks.find((link) => link.href === pathname)?.label ||
+        navigationLinks[0].label; // fallback if none match
+      setActiveLink(matchingLink);
+    }, [pathname, navigationLinks]);
+
+    const navigate = useNavigate();
+
     useEffect(() => {
       const checkWidth = () => {
         if (containerRef.current) {
@@ -171,14 +159,14 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
       <header
         ref={combinedRef}
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 [&_*]:no-underline px-4 md:px-6',
+          'sticky top-0 z-50 w-full border-b-2 border-border px-4 md:px-6 [&_*]:no-underline',
           className
         )}
         {...props}
       >
         <div className="container mx-auto flex h-24 max-w-screen-2xl items-center justify-between gap-4">
           {/* Left side */}
-          <div className="flex items-center gap-2 "> {/* Logo can be added here ml-auto to align to right */}
+          <div className="flex items-center gap-2 ml-auto"> {/* Logo can be added here ml-auto to align to right */}
             {/* Mobile menu trigger */}
             {isMobile && (
               <Popover>
@@ -200,6 +188,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
                             onClick={(e) => {
                                 e.preventDefault();
                                 setActiveLink(link.label);
+                                navigate(link.href || '/');
                             }}
                             className={cn(
                               'flex w-full items-center rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground cursor-pointer no-underline',
@@ -228,10 +217,11 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
                           onClick={(e) => {
                             e.preventDefault();
                             setActiveLink(link.label);
+                            navigate(link.href || '/');
                           }}
                           className={cn(
                             // Base style
-                            'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background m-5 px-4 py-2 text-lg font-medium transition-colors cursor-pointer relative',
+                            'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background m-5 px-6 py-6 text-lg font-semibold transition-colors cursor-pointer relative',
                             // Hover & focus color
                             'hover:text-accent-foreground focus:text-accent-foreground focus:outline-none',
                             // Animated underline effect
