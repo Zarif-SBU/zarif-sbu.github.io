@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Linkedin, LinkedinIcon, GithubIcon, Github, Mail } from "lucide-react";
+import { LinkedinIcon, Github, Mail } from "lucide-react";
 
 
 function About() {
