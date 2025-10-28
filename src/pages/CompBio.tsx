@@ -72,9 +72,9 @@ function CompBio() {
   };
 
   return (
-    <div className="flex h-full mt-8 overflow-hidden">
+    <div className="flex h-full mt-8 overflow-hidden animate-fadeIn">
       {/* Left sidebar */}
-      <div className="hidden md:flex flex-col items-center justify-start w-1/5 border-r-2 border-border overflow-y-auto">
+      <div className="hidden md:flex flex-col items-center justify-start w-1/5 border-r-2 border-border overflow-y-auto ">
         <nav className="flex flex-col items-center w-full space-y-4">
           {Object.entries(categories).map(([category, projects]) => (
             <div key={category} className="w-full">
@@ -112,7 +112,7 @@ function CompBio() {
       </div>
 
       {/* Right content view */}
-      <div className="flex-1 p-4 overflow-hidden">{renderContent()}</div>
+      <div className="flex-1 p-4 overflow-hidden ">{renderContent()}</div>
     </div>
   );
 }

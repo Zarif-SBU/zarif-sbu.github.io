@@ -92,7 +92,7 @@ export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
 // Default navigation links
 const defaultNavigationLinks: NavbarNavItem[] = [
   { href: '/about', label: 'About Me', active: true },
-  { href: '/resume', label: 'Resumes' },
+  { href: '/research', label: 'Research' },
   { href: '/Kura', label: 'Kura Customs' },
   { href: '/projects', label: 'Projects' },
   { href: '/comp-bio', label: 'Computational Bio' },

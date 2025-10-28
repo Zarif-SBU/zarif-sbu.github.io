@@ -26,15 +26,15 @@ function KuraCustoms() {
   ];
   return (
     
-  <div className="flex">
+  <div className="flex animate-fadeIn">
     {/*Left section*/}
-   <div className="w-1/4 flex flex-col mt-4">
+   <div className="w-1/5 flex flex-col mt-8 border-r-2 border-border">
       {/* Logo and Title Section */}
-      <div className="flex flex-col items-center mb-6">
+      <div className="flex flex-col items-center">
         <a href="https://www.kuracustoms.com/" target="_blank" rel="noopener noreferrer" className="group">
-          <img src="/realKuraLogo.png" alt="Kura Customs logo" className="w-full max-w-[100px] transition duration-300 group-hover:brightness-95" />
+          <img src="/realKuraLogo.png" alt="Kura Customs logo" className="w-full max-w-[150px] transition duration-300 group-hover:brightness-95" />
         </a>
-        <a href="https://www.kuracustoms.com/" target="_blank" rel="noopener noreferrer" className="mt-4">
+        <a href="https://www.kuracustoms.com/" target="_blank" rel="noopener noreferrer" className="">
           <h3 className={cn("text-3xl leading-relaxed text-foreground font-bold transition duration-300 hover:brightness-200")}>
             Kura Customs
           </h3>
@@ -42,15 +42,27 @@ function KuraCustoms() {
       </div>
 
       {/* Description */}
-      <p className="text-lg text-muted-foreground text-center px-4 mb-6">
-        An e-commerce site built by me and two college friends to share our
-        hobby with a wider audience!
+      <p className="text-md text-muted-foreground text-center px-4 mb-6">
+        E-commerce site built by me and 2 friends to share our
+        hobby with others!
       </p>
 
       {/* Tech Stack */}
-      <Separator className="mb-4" />
+      {/* <Separator className="mb-4 " /> */}
       <div className="px-4">
-        <h4 className="text-lg font-bold mb-3 text-foreground">Tech Stack</h4>
+        <h4 className="text-lg font-bold mb-3 text-foreground"> Languages </h4>
+          <div className="flex flex-wrap gap-2 mb-6">
+            <Badge variant="outline" className="text-sm font-medium px-2 py-1">
+              TypeScript
+            </Badge>
+            <Badge variant="outline" className="text-sm font-medium px-2 py-1">
+              HTML
+            </Badge>
+            <Badge variant="outline" className="text-sm font-medium px-2 py-1">
+              CSS
+            </Badge>
+          </div>
+        <h4 className="text-lg font-bold mb-3 text-foreground"> Tech Stack </h4>
         <div className="flex flex-wrap gap-2">
           {techStack.map((tech) => (
             <Badge key={tech} variant="outline" className="text-sm font-medium px-2 py-1">
@@ -61,7 +73,7 @@ function KuraCustoms() {
       </div>
     </div>
       {/* Right side content goes here */}
-      <div className="flex-1 p-4 mt-8">   
+    <div className="flex-1 p-4 mt-8">   
         {/* Overview */}
         <h2 className="text-4xl font-semibold text-foreground">Overview</h2>
         <p className="text-lg leading-relaxed text-foreground">

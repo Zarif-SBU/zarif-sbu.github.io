@@ -34,7 +34,7 @@ function Projects() {
     }
   }
   return (
-    <div className="h-full md:h-auto flex">
+    <div className="h-full md:h-auto flex animate-fadeIn">
       {/*Left navbar */}
       <div className="hidden md:flex flex-col w-1/5 mt-8 border-r-2 border-border ml-auto">
       <nav className="md:flex flex-col items-center">

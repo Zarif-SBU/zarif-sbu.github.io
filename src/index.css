@@ -4,6 +4,16 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
 :root {
   --background: hsl(55.0000 30.0000% 92.1569%);
   --foreground: hsl(15.6522 15.4362% 29.2157%);

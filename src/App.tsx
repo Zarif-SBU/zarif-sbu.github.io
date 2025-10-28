@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Navbar } from './components/layout/Navbar'
 import About from './pages/About'
-import Resume from './pages/Resume'
+import Research from './pages/Research'
 import Projects from './pages/Projects'
 import CompBio from './pages/CompBio'
 import KuraCustoms from './pages/KuraCustoms'
@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/about" element={<About />} />
-            <Route path="/resume" element={<Resume />} />
+            <Route path="/research" element={<Research />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/comp-bio" element={<CompBio />} />
             <Route path="/Kura" element={<KuraCustoms />}/>

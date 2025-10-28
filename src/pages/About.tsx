@@ -13,9 +13,9 @@ function About() {
     })
   }
   return (
-    <div className="flex h-full md:h-auto">
+    <div className="flex h-full md:h-auto animate-fadeIn">
       {/* Left section (portrait + name) */}
-      <div className="hidden md:flex flex-col items-center justify-start w-1/4 mt-8 border-r-2 border-border">
+      <div className="hidden md:flex flex-col items-center justify-start w-1/5 mt-8 border-r-2 border-border">
         <div className="w-56 h-64 bg-accent rounded-md"></div>
         <p className="mt-4 text-foreground text-lg font-semibold">Zarif Ahmed</p>
         {/* Social media links underline the texts */}
