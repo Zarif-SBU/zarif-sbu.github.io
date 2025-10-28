@@ -93,8 +93,9 @@ export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
 const defaultNavigationLinks: NavbarNavItem[] = [
   { href: '/about', label: 'About Me', active: true },
   { href: '/resume', label: 'Resumes' },
+  { href: '/Kura', label: 'Kura Customs' },
   { href: '/projects', label: 'Projects' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/comp-bio', label: 'Computational Bio' },
 ];
 
 export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
@@ -209,7 +210,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
               {/* Navigation menu */}
               {!isMobile && (
                 <NavigationMenu className="flex">
-                  <NavigationMenuList className="gap-1">
+                  <NavigationMenuList className="">
                     {navigationLinks.map((link, index) => (
                       <NavigationMenuItem key={index}>
                         <NavigationMenuLink
@@ -221,7 +222,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
                           }}
                           className={cn(
                             // Base style
-                            'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background m-5 px-6 py-6 text-lg font-semibold transition-colors cursor-pointer relative',
+                            'group inline-flex h-10 w-max items-center justify-center rounded-md bg-background m-2 px-6 py-6 text-lg font-semibold transition-colors cursor-pointer relative',
                             // Hover & focus color
                             'hover:text-accent-foreground focus:text-accent-foreground focus:outline-none',
                             // Animated underline effect

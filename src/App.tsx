@@ -3,13 +3,14 @@ import { Navbar } from './components/layout/Navbar'
 import About from './pages/About'
 import Resume from './pages/Resume'
 import Projects from './pages/Projects'
-import Contact from './pages/Contact'
+import CompBio from './pages/CompBio'
+import KuraCustoms from './pages/KuraCustoms'
 import './App.css'
 
 function App() {
   
   return (
-    <div className="flex flex-col min-h-screen bg-background">
+    <div className="flex flex-col h-screen bg-background">
       <Router>
         <Navbar />
         <main className="flex-1 overflow-hidden">
@@ -18,7 +19,8 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/resume" element={<Resume />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
+            <Route path="/comp-bio" element={<CompBio />} />
+            <Route path="/Kura" element={<KuraCustoms />}/>
           </Routes>
         </main>
       </Router>
