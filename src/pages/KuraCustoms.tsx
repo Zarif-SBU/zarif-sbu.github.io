@@ -26,9 +26,9 @@ function KuraCustoms() {
   ];
   return (
     
-  <div className="flex animate-fadeIn">
+  <div className="flex bg-background h-screen top-24 left-0">
     {/*Left section*/}
-   <div className="w-1/5 flex flex-col mt-8 border-r-2 border-border">
+   <div className="fixed w-1/5 h-[calc(100vh-6rem)] bg-background border-r-2 border-border flex flex-col pt-8">
       {/* Logo and Title Section */}
       <div className="flex flex-col items-center">
         <a href="https://www.kuracustoms.com/" target="_blank" rel="noopener noreferrer" className="group">
@@ -73,7 +73,7 @@ function KuraCustoms() {
       </div>
     </div>
       {/* Right side content goes here */}
-    <div className="flex-1 p-4 mt-8">   
+    <div className="flex-1 p-4 mt-8 overflow-y-auto ml-[20%] animate-fadeIn">   
         {/* Overview */}
         <h2 className="text-4xl font-semibold text-foreground">Overview</h2>
         <p className="text-lg leading-relaxed text-foreground">
@@ -85,7 +85,7 @@ function KuraCustoms() {
         </p>
 
         {/* Features */}
-        <Separator className="" />
+        <Separator className="my-6" />
         <h2 className="text-2xl font-semibold text-foreground">Key Features</h2>
         <ul className="list-disc list-inside text-lg leading-relaxed text-foreground">
             {features.map((f, idx) => (
@@ -94,7 +94,7 @@ function KuraCustoms() {
         </ul>
 
         {/* Role */}
-        <Separator className="" />
+        <Separator className="my-6" />
         <h2 className="text-2xl font-semibold text-foreground">My Role</h2>
         <p className="text-lg leading-relaxed text-foreground">
             I focused on connecting and managing the backend with{" "}
@@ -106,7 +106,7 @@ function KuraCustoms() {
         </p>
 
         {/* Outcome */}
-        <Separator className="" />
+        <Separator className="my-6" />
         <h2 className="text-2xl font-semibold text-foreground">Outcome</h2>
         <p className="text-lg leading-relaxed text-foreground">
             The final product is a polished and reliable e-commerce platform that

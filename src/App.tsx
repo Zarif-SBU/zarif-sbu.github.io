@@ -10,10 +10,10 @@ import './App.css'
 function App() {
   
   return (
-    <div className="flex flex-col h-screen bg-background">
+    <div className="flex flex-col ">
       <Router>
         <Navbar />
-        <main className="flex-1 overflow-hidden">
+        <main className="flex-1">
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/about" element={<About />} />

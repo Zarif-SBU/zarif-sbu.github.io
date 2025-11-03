@@ -160,12 +160,12 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
       <header
         ref={combinedRef}
         className={cn(
-          'sticky top-0 z-50 w-full border-b-2 border-border px-4 md:px-6 [&_*]:no-underline',
+          'sticky top-0 z-50 w-full border-b-2 border-border px-4 md:px-6 bg-background',
           className
         )}
         {...props}
       >
-        <div className="container mx-auto flex h-24 max-w-screen-2xl items-center justify-between gap-4">
+        <div className="flex h-24 w-full items-center justify-between gap-4">
           {/* Left side */}
           <div className="flex items-center gap-2 ml-auto"> {/* Logo can be added here ml-auto to align to right */}
             {/* Mobile menu trigger */}

@@ -37,7 +37,7 @@ function CompBio() {
   const renderContent = () => {
     if (!activeProject) {
       return (
-        <div className="">
+        <div className="mt-8">
           <h1 className="text-4xl font-bold mb-4 text-foreground">Overview </h1>
           <p className="text-lg leading-relaxed text-foreground">
             A collection of my Simulation work in MATLAB.
@@ -53,12 +53,12 @@ function CompBio() {
     return (
       <div className="flex flex-col h-full">
         <div className="">
-          <h1 className="text-4xl font-bold mb-4 text-foreground">
+          {/* <h1 className="text-4xl font-bold mb-4 text-foreground">
             {activeProject}
-          </h1>
-          <a className="text-lg leading-relaxed text-foreground">
+          </h1> */}
+          {/* <a className="text-lg leading-relaxed text-foreground">
             Link to my GitHub repository
-          </a>
+          </a> */}
         </div>
         <div className="flex-1 min-h-0 p-4">
           <iframe
@@ -72,9 +72,9 @@ function CompBio() {
   };
 
   return (
-    <div className="flex h-full mt-8 overflow-hidden animate-fadeIn">
+    <div className="flex overflow-hidden h-full animate-fadeIn">
       {/* Left sidebar */}
-      <div className="hidden md:flex flex-col items-center justify-start w-1/5 border-r-2 border-border overflow-y-auto ">
+      <div className="hidden mt-8 md:flex flex-col h-full items-center justify-start w-1/5 border-r-2 border-border overflow-y-auto ">
         <nav className="flex flex-col items-center w-full space-y-4">
           {Object.entries(categories).map(([category, projects]) => (
             <div key={category} className="w-full">
@@ -112,7 +112,7 @@ function CompBio() {
       </div>
 
       {/* Right content view */}
-      <div className="flex-1 p-4 overflow-hidden ">{renderContent()}</div>
+      <div className="flex-1 p-4 overflow-hidden">{renderContent()}</div>
     </div>
   );
 }
