@@ -28,7 +28,7 @@ function KuraCustoms() {
     
   <div className="flex bg-background">
     {/*Left section*/}
-   <div className="fixed w-1/5 min-h-screen bg-background border-r-2 border-border flex flex-col pt-8 top-24">
+   <div className="fixed w-1/5 min-h-screen bg-background border-r-2 border-border flex flex-col pt-8 top-24 animate-fadeIn">
       {/* Logo and Title Section */}
       <div className="flex flex-col items-center">
         <a href="https://www.kuracustoms.com/" target="_blank" rel="noopener noreferrer" className="group">

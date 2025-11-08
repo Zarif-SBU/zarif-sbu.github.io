@@ -17,9 +17,9 @@ function Research() {
   ];
 
   return (
-    <div className="flex bg-background">
+    <div className="flex bg-background ">
       {/* Fixed Sidebar - starts below navbar */}
-      <div className="fixed w-1/5 min-h-screen bg-background border-r-2 border-border flex flex-col pt-8 top-24">
+      <div className="fixed w-1/5 min-h-screen bg-background border-r-2 border-border flex flex-col pt-8 top-24 animate-fadeIn">
         {/* Logo and Title Section */}
         <div className="flex flex-col items-center duration-300 hover:brightness-200">
           <a
