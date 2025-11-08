@@ -40,10 +40,12 @@ function About() {
       </div>
 
       {/* Right section (content) */}
-      <div className="flex-1 p-4 mt-8">
+      <div className="flex-1 p-8">
+        <h1 className="text-lg font-bold mb-4 text-accent-foreground"> *** I'm still working on designing and filling out my portfolio, but feel free to look through what is there!</h1>
         <h1 className="text-4xl font-bold mb-4 text-foreground">About Me</h1>
         <p className="text-lg leading-relaxed text-foreground">
-          Hello! I'm Zarif Sbu, a passionate software developer with a love for creating innovative solutions. With experience in various programming languages and frameworks, I enjoy tackling complex problems and turning ideas into reality. When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or indulging in my hobbies like photography and hiking.
+          Hello! I'm Zarif, a recent graduate from Stony Brook University who majored both Applied Mathematics and Computer Science. I have a strong passion for problem-solving and coding, which drove me to pursue a career in data science and software engineering. As I continued my acedemic journey I found an appreciation for using Computer simulations and Mathematical models to solve complex biological problems. With that interest, 
+          I aspire to persue a master's in computational biology or a related field in the future.
         </p>
       </div>
     </div>

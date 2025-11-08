@@ -5,9 +5,6 @@ body {
   padding: 0;
 }
 
-html {
-  scrollbar-gutter: stable; /* keeps layout stable when scrollbar appears */
-}
 
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(5px); }
@@ -18,7 +15,7 @@ html {
   animation: fadeIn 0.4s ease-in-out;
 }
 
-@layer utilities {
+/* @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
@@ -26,6 +23,26 @@ html {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+} */
+
+body {
+  margin: 0;
+  padding: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 :root {
@@ -188,3 +205,4 @@ html {
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
 }
+

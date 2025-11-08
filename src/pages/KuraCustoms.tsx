@@ -26,9 +26,9 @@ function KuraCustoms() {
   ];
   return (
     
-  <div className="flex bg-background h-screen top-24 left-0">
+  <div className="flex bg-background">
     {/*Left section*/}
-   <div className="fixed w-1/5 h-[calc(100vh-6rem)] bg-background border-r-2 border-border flex flex-col pt-8">
+   <div className="fixed w-1/5 min-h-screen bg-background border-r-2 border-border flex flex-col pt-8 top-24">
       {/* Logo and Title Section */}
       <div className="flex flex-col items-center">
         <a href="https://www.kuracustoms.com/" target="_blank" rel="noopener noreferrer" className="group">
@@ -73,20 +73,19 @@ function KuraCustoms() {
       </div>
     </div>
       {/* Right side content goes here */}
-    <div className="flex-1 p-4 mt-8 overflow-y-auto ml-[20%] animate-fadeIn">   
+    <div className="flex-1 p-8 ml-[20%] animate-fadeIn">   
         {/* Overview */}
-        <h2 className="text-4xl font-semibold text-foreground">Overview</h2>
+        <h2 className="text-4xl mb-4 font-semibold text-foreground">Overview</h2>
         <p className="text-lg leading-relaxed text-foreground">
             Kura Customs began as a small creative project among friends and evolved
-            into a full-fledged e-commerce site. The platform was developed using{" "}
-            <strong>Next.js</strong> and deployed via <strong>Vercel</strong> for
-            scalability and performance. Our goal was to build a seamless online
+            into a full-fledged e-commerce prokect. The platform was developed using{" "}
+            <strong>Next.js</strong> and deployed via <strong>Vercel</strong>. Our goal was to build a seamless online
             shopping experience — from product browsing to payment and shipping.
         </p>
 
         {/* Features */}
-        <Separator className="my-6" />
-        <h2 className="text-2xl font-semibold text-foreground">Key Features</h2>
+        <Separator className="my-2" />
+        <h2 className="text-2xl mb-4 font-semibold text-foreground">Key Features</h2>
         <ul className="list-disc list-inside text-lg leading-relaxed text-foreground">
             {features.map((f, idx) => (
             <li key={idx}>{f}</li>
@@ -94,8 +93,8 @@ function KuraCustoms() {
         </ul>
 
         {/* Role */}
-        <Separator className="my-6" />
-        <h2 className="text-2xl font-semibold text-foreground">My Role</h2>
+        <Separator className="my-2" />
+        <h2 className="text-2xl mb-4 font-semibold text-foreground">My Role</h2>
         <p className="text-lg leading-relaxed text-foreground">
             I focused on connecting and managing the backend with{" "}
             <strong>Prisma ORM</strong> and <strong>PostgreSQL</strong>, ensuring
@@ -106,8 +105,8 @@ function KuraCustoms() {
         </p>
 
         {/* Outcome */}
-        <Separator className="my-6" />
-        <h2 className="text-2xl font-semibold text-foreground">Outcome</h2>
+        <Separator className="my-2" />
+        <h2 className="text-2xl mb-4 font-semibold text-foreground">Outcome</h2>
         <p className="text-lg leading-relaxed text-foreground">
             The final product is a polished and reliable e-commerce platform that
             automates much of the sales and fulfillment process while offering a

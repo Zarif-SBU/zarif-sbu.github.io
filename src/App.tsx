@@ -10,7 +10,7 @@ import './App.css'
 function App() {
   
   return (
-    <div className="flex flex-col ">
+    <div className="flex flex-col bg-background min-h-screen">
       <Router>
         <Navbar />
         <main className="flex-1">
