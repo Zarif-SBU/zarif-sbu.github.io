@@ -50,6 +50,10 @@ function KuraCustoms() {
       {/* Tech Stack */}
       {/* <Separator className="mb-4 " /> */}
       <div className="px-4">
+        <h4 className="text-lg font-bold text-foreground">Role</h4>
+        <p className="text-base font-medium mb-3 text-foreground">
+          Full-Stack Developer
+        </p>
         <h4 className="text-lg font-bold mb-3 text-foreground"> Languages </h4>
           <div className="flex flex-wrap gap-2 mb-6">
             <Badge variant="outline" className="text-sm font-medium px-2 py-1">

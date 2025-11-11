@@ -18,6 +18,7 @@ function About() {
       <div className="hidden md:flex flex-col items-center justify-start w-1/5 mt-8 border-r-2 border-border">
         <div className="w-56 h-64 bg-accent rounded-md"></div>
         <p className="mt-4 text-foreground text-lg font-semibold">Zarif Ahmed</p>
+        <p className="text-foreground text-base ">Data Scientist and SWE</p>
         {/* Social media links underline the texts */}
         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ahmedzarif" className="flex items-center gap-2 text-foreground text-lg font-medium underline">
           <LinkedinIcon className="w-5 h-5" />
