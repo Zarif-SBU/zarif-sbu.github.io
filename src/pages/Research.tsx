@@ -22,7 +22,7 @@ function Research() {
   return (
     <div className="flex bg-background ">
       {/* Fixed Sidebar - starts below navbar */}
-      <div className="fixed w-1/5 min-h-screen bg-background border-r-2 border-border flex flex-col pt-8 top-24 animate-fadeIn">
+      <div className="fixed w-1/5  bg-background border-r-2 border-border flex flex-col mt-8 mb-8 top-24 animate-fadeIn">
         {/* Logo and Title Section */}
         <div className="flex flex-col items-center duration-300 hover:brightness-200">
           <a
@@ -96,29 +96,29 @@ function Research() {
         </p>
 
         <h1 className="text-2xl text-foreground font-bold mb-4">My Role</h1>
-        <p className="text-lg leading-relaxed text-foreground mb-8">
+        <p className="text-lg leading-relaxed text-foreground">
           As a research assistant in the GUI subgroup, I designed and built several of the team's interactive analysis tools 
           for evaluating state and congressional district plans. Over time, my role expanded to include data processing 
           and onboarding new team members through mentorship and documentation.
         </p>
 
         {/* UI Comparison */}
-        <h2 className="text-2xl text-foreground font-bold mt-6 text-center">Old GUI vs New GUI</h2>
+        <h2 className="text-3xl text-foreground font-bold mt-12 text-center">Old GUI vs New GUI</h2>
         <p className="text-base leading-relaxed text-foreground mb-2 text-center">
           Comparison of the interface before and after my redesign with improvements in usability, 
           visual hierarchy, and overall layout clarity.
         </p>
         <Comparison className="aspect-2555/1175 border-2 border-card-foreground w-[90%] mx-auto max-w-5xl rounded-2xl shadow-lg overflow-hidden" mode="hover">
-          <ComparisonItem position="left">
+          <ComparisonItem position="right">
             <img src="/politech/ui-compare/GUI-Old.png" alt="Old PoliTech UI design" height={1175} width={2555} />
           </ComparisonItem>
-          <ComparisonItem position="right">
+          <ComparisonItem position="left">
             <img src="/politech/ui-compare/GUI-New.png" alt="New PoliTech UI redesign" height={1175} width={2555} />
           </ComparisonItem>
           <ComparisonHandle className="text-foreground" />
         </Comparison>
 
-        <h2 className="text-2xl text-foreground font-bold mt-12 text-center">Visualization tools</h2>
+        <h2 className="text-3xl text-foreground font-bold mt-12 text-center">Visualization tools</h2>
         <p className="text-base leading-relaxed text-foreground mb-2 text-center">
           Below are several core components I designed and implemented, including visualization tools and user interaction elements 
           used across our platform.

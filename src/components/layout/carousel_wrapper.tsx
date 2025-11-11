@@ -15,7 +15,7 @@ interface SlideshowProps {
 
 export default function Carousel_Wrapper({ images, descriptions }: SlideshowProps) {
   return (
-    <Carousel className="w-[90%] max-w-5xl mx-auto border-card-foreground border-2 rounded-2xl">
+    <Carousel className="w-[90%] max-w-5xl mx-auto ">
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
