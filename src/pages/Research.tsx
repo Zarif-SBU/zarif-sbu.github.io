@@ -4,7 +4,7 @@ import { Comparison, ComparisonHandle, ComparisonItem } from '@/components/ui/sh
 import { Github, Link2 } from "lucide-react";
 
 // import GuidedWithFull from "@/components/ui/guidedwithfull";
-import { cn } from "../lib/utils";
+// import { cn } from "../lib/utils";
 import Carousel_Wrapper from "@/components/layout/carousel_wrapper";
 
 function Research() {
