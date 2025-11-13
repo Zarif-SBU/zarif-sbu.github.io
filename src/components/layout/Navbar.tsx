@@ -134,7 +134,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
       const checkWidth = () => {
         if (containerRef.current) {
           const width = containerRef.current.offsetWidth;
-          setIsMobile(width < 768); // 768px is md breakpoint
+          setIsMobile(width < 1024); // 768px is md breakpoint
         }
       };
       checkWidth();
@@ -160,7 +160,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
       <header
         ref={combinedRef}
         className={cn(
-          'sticky top-0 z-50 w-full border-b-2 border-border px-4 md:px-6 bg-background',
+          'fixed top-0 z-50 w-full border-b-2 border-border px-4 md:px-6 bg-background',
           className
         )}
         {...props}

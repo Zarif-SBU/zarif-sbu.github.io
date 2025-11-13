@@ -13,7 +13,7 @@ function App() {
     <div className="flex flex-col bg-background min-h-screen">
       <Router>
         <Navbar />
-        <main className="flex-1">
+        <main className="flex-1 sticky mt-24">
           <Routes>
             <Route path="/" element={<About />} />
             <Route path="/about" element={<About />} />

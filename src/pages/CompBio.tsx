@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
+import { Github } from "lucide-react";
 
 function CompBio() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -42,6 +43,20 @@ function CompBio() {
           <p className="text-lg leading-relaxed text-foreground">
             A collection of my Simulation work in MATLAB.
           </p>
+          <div className="mb-2 flex items-center">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/Zarif-SBU/Computational_Biology"
+              className="flex items-center gap-2 text-foreground text-lg font-bold underline"
+            >
+              <Github className="w-5 h-5" />
+              <span className="translate-y-[1.5px]">GitHub</span>
+            </a>
+            <span className="mt-1">
+              : Matlab Code for all labs.
+            </span>
+          </div>
         </div>
       );
     }
@@ -72,7 +87,7 @@ function CompBio() {
   };
 
   return (
-    <div className="flex overflow-hidden h-full animate-fadeIn">
+    <div className="flex overflow-hidden h-full animate-fadeIn lg:top-24 lg:h-[calc(100vh-6rem)] bg-background top-24">
       {/* Left sidebar */}
       <div className="hidden mt-8 md:flex flex-col h-full items-center justify-start w-1/5 border-r-2 border-border overflow-y-auto ">
         <nav className="flex flex-col items-center w-full space-y-4">
