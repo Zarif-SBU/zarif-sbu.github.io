@@ -1,6 +1,7 @@
 import {cn} from '../lib/utils'
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Link2 } from 'lucide-react';
 
 function KuraCustoms() {
   const techStack = [
@@ -79,50 +80,71 @@ function KuraCustoms() {
       {/* Desktop Sidebar - scrollable */}
       <aside className="hidden lg:flex lg:sticky lg:top-24 lg:h-[calc(100vh-6rem)] flex-col w-1/5 bg-accent/5 border-r border-border pt-8 pb-6 px-6 overflow-y-auto animate-fadeIn">
         {/* Logo and Title Section */}
-        <div className="flex flex-col items-center">
-          <a href="https://www.kuracustoms.com/" target="_blank" rel="noopener noreferrer" className="group">
-            <img src="/realKuraLogo.png" alt="Kura Customs logo" className="w-full max-w-[150px] transition duration-300 group-hover:brightness-95" />
+        <div className="flex flex-col items-center gap-2">
+          {/* Logo */}
+          <a
+            href="https://www.kuracustoms.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group"
+          >
+            <img
+              src="/realKuraLogo.png"
+              alt="Kura Customs logo"
+              className="w-full max-w-[150px] transition duration-300 group-hover:brightness-95"
+            />
           </a>
-          <a href="https://www.kuracustoms.com/" target="_blank" rel="noopener noreferrer">
-            <h3 className={cn("text-3xl leading-relaxed text-foreground font-bold transition duration-300 hover:text-accent-foreground mt-4 hover:brightness-200")}>
+
+          {/* Title + Link icon */}
+          <div className="relative flex items-center justify-center hover:brightness-200 transition duration-300">
+            <a
+              href="https://www.kuracustoms.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl leading-relaxed text-foreground font-bold transition duration-300 hover:text-accent-foreground"
+            >
               Kura Customs
-            </h3>
-          </a>
+            </a>
+            <Link2
+              className="absolute -left-10 top-1/2 -translate-y-1/2 text-foreground hover:text-accent-foreground transition-colors"
+              size={30}
+            />
+          </div>
         </div>
 
         {/* Description */}
-        <p className="text-sm text-muted-foreground text-center mb-8">
+        <p className="text-base text-muted-foreground text-center mb-8">
           <strong>E-commerce site</strong> built by me and 2 friends to share our hobby with others!
         </p>
 
         {/* Role */}
-        <div className="mb-6">
-          <h4 className="text-lg font-bold text-foreground mb-2 underline">Role</h4>
-          <p className="text-sm text-foreground">
+        <div className="mb-4">
+          <h4 className="text-lg font-bold text-foreground underline">Role</h4>
+          <p className="text-base text-foreground">
             Full-Stack Developer
           </p>
         </div>
         {/* Languages */}
-        <div className="mb-6">
-          <h4 className="text-lg font-bold text-foreground mb-2 underline">Languages</h4>
+        <div className="mb-4">
+          <h4 className="text-lg font-bold text-foreground mb-1 underline">Languages</h4>
           <div className="flex flex-wrap gap-1.5">
-            <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
+            <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium">
               TypeScript
             </Badge>
-            <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
+            <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium">
               HTML
             </Badge>
-            <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
+            <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium">
               CSS
             </Badge>
           </div>
         </div>
         {/* Tech Stack */}
         <div>
-          <h4 className="text-lg font-bold text-foreground mb-2 underline">Tech Stack</h4>
+          <h4 className="text-lg font-bold text-foreground mb-1 underline">Tech Stack</h4>
           <div className="flex flex-wrap gap-1.5">
             {techStack.map((tech) => (
-              <Badge key={tech} variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
+              <Badge key={tech} variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium">
                 {tech}
               </Badge>
             ))}
@@ -131,8 +153,8 @@ function KuraCustoms() {
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 p-6 lg:p-12 overflow-y-auto animate-fadeIn">
-        <div className="max-w-7xl mx-auto">
+      <main className="flex-1 p-6 overflow-y-auto animate-fadeIn">
+        <div className="max-w-352 mx-auto">
           {/* Overview */}
           <section className="mb-12">
             <h2 className="text-3xl lg:text-4xl mb-4 font-semibold text-foreground">Overview</h2>

@@ -1,7 +1,7 @@
 import { Gavel } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Comparison, ComparisonHandle, ComparisonItem } from '@/components/ui/shadcn-io/comparison';
-import { Github } from "lucide-react";
+import { Github, Link2 } from "lucide-react";
 
 // import GuidedWithFull from "@/components/ui/guidedwithfull";
 import { cn } from "../lib/utils";
@@ -22,7 +22,6 @@ function Research() {
 
   return (
     <div className="flex flex-col lg:flex-row bg-background min-h-screen ">
-
       {/* Mobile Header */}
       <div className="lg:hidden w-full bg-accent/5 border-b border-border px-5 pt-6 animate-fadeIn">
         <div className="flex items-start gap-4">
@@ -77,7 +76,7 @@ function Research() {
       {/* Desktop Sidebar */}
       <aside className="hidden lg:flex lg:sticky lg:top-24 lg:h-[calc(100vh-6rem)] flex-col w-1/5 bg-accent/5 border-r border-border pt-8 pb-6 px-6 overflow-y-auto animate-fadeIn">
         {/* Logo and Title Section */}
-        <div className="flex flex-col items-center duration-300 hover:brightness-200 gap-4">
+        <div className="flex flex-col items-center duration-300 hover:brightness-200 gap-2">
           <a
             href="https://www.stonybrook.edu/commcms/vertically-integrated-projects/teams/_team_page/team_page.php?team=PoliTech"
             target="_blank"
@@ -86,51 +85,56 @@ function Research() {
           >
             <Gavel size={150} className="hover:brightness-150" />
           </a>
-          <a
-            href="https://www.stonybrook.edu/commcms/vertically-integrated-projects/teams/_team_page/team_page.php?team=PoliTech"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h3 className={cn("text-3xl leading-relaxed text-foreground font-bold transition")}>
+          <div className="relative flex items-center justify-center">
+            <a
+              href="https://www.stonybrook.edu/commcms/vertically-integrated-projects/teams/_team_page/team_page.php?team=PoliTech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl font-bold text-foreground hover:text-accent-foreground transition-colors"
+            >
               PoliTech
-            </h3>
-          </a>
+            </a>
+            <Link2
+              className="absolute -left-10 top-1/2 -translate-y-1/2 text-foreground hover:text-accent-foreground transition-colors"
+              size={30}
+            />
+          </div>
         </div>
 
         {/* Description */}
-        <p className="text-sm text-muted-foreground text-center mb-8">
+        <p className="text-base text-muted-foreground text-center mb-4">
           <strong> Political research team</strong> under the mentorship of Dr. Robert F. Kelly at Stony Brook University
         </p>
 
 
         {/* Tech Stack */}
-          <div className="mb-6">
-            <h4 className="text-lg font-bold text-foreground mb-2 underline">Role</h4>
-            <p className="text-sm text-foreground">
+          <div className="mb-4">
+            <h4 className="text-lg font-bold text-foreground  underline">Role</h4>
+            <p className="text-base text-foreground">
               Research Assistant (Frontend Developer and Data Analyst)
             </p>
           </div>
-          <div className="mb-6">
-            <h4 className="text-lg font-bold text-foreground mb-2 underline">Languages</h4>
+          <div className="mb-4">
+            <h4 className="text-lg font-bold text-foreground mb-1 underline">Languages</h4>
             <div className="flex flex-wrap gap-1.5">
-              <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
+              <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium">
                 Python
               </Badge>
-              <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
+              <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium">
                 TypeScript
               </Badge>
-              <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
+              <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium">
                 HTML
               </Badge>
-              <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
+              <Badge variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium">
                 CSS
               </Badge>
             </div>
           </div>
-          <h4 className="text-lg font-bold text-foreground mb-2 underline">Tech Stack</h4>
+          <h4 className="text-lg font-bold text-foreground mb-1 underline">Tech Stack</h4>
           <div className="flex flex-wrap gap-1.5">
             {techStack.map((tech) => (
-              <Badge key={tech} variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
+              <Badge key={tech} variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium">
                 {tech}
               </Badge>
             ))}
@@ -138,8 +142,8 @@ function Research() {
       </aside>
 
       {/* Right Side Content - Scrollable */}
-      <main className="flex-1 p-6 lg:p-12 overflow-y-auto animate-fadeIn">
-        <div className="max-w-7xl mx-auto">
+      <main className="flex-1 p-6 overflow-y-auto animate-fadeIn">
+        <div className="max-w-352 mx-auto">
           <h1 className="text-3xl lg:text-4xl mb-4 font-semibold text-foreground">Our Mission</h1>
           <p className="text-base lg:text-lg leading-relaxed text-foreground">Promote fair representation of the American people in U.S. elections 
             We pursue this goal through several ongoing projects that combine data analysis, software development, and policy research. These include:
