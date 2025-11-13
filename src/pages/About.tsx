@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { LinkedinIcon, Github, Mail, Code2, GraduationCap, Briefcase, SquareCheckBig, BicepsFlexed, Book, Bike } from "lucide-react";
 
+import { Badge } from "@/components/ui/badge";
 
 function About() {
   const [copied, setCopied] = useState(false);
@@ -74,7 +75,7 @@ function About() {
           I aspire to persue a master's in computational biology or a related field in the future.
         </p>
        {/* 2x2 Grid Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 pb-1">
           {/* Education */}
           <div className="bg-accent/5 border-border px-6 pt-4">
             <h3 className="text-xl font-semibold text-accent-foreground mb-3 flex items-center gap-2 border-b">
@@ -98,12 +99,9 @@ function About() {
                 <h4 className="text-base font-semibold text-foreground mb-1">Languages</h4>
                 <div className="flex flex-wrap gap-1">
                   {skills.languages.map((skill) => (
-                    <span 
-                      key={skill} 
-                      className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium"
-                    >
+                    <Badge key={skill} variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
                       {skill}
-                    </span>
+                    </Badge>
                   ))}
                 </div>
               </div>
@@ -111,12 +109,9 @@ function About() {
                 <h4 className="text-base font-semibold text-foreground mb-1">Data Science & ML</h4>
                 <div className="flex flex-wrap gap-1">
                   {skills.data.map((skill) => (
-                    <span 
-                      key={skill} 
-                      className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium"
-                    >
+                    <Badge key={skill} variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
                       {skill}
-                    </span>
+                    </Badge>
                   ))}
                 </div>
               </div>
@@ -124,12 +119,9 @@ function About() {
                 <h4 className="text-base font-semibold text-foreground mb-1">Web Development</h4>
                 <div className="flex flex-wrap gap-1">
                   {skills.web.map((skill) => (
-                    <span 
-                      key={skill} 
-                      className="px-2 py-0.5 bg-accent/20 text-foreground text-sm rounded-md border border-accent/30 font-medium"
-                    >
+                    <Badge key={skill} variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
                       {skill}
-                    </span>
+                    </Badge>
                   ))}
                 </div>
               </div>
@@ -167,15 +159,15 @@ function About() {
             <ul className="space-y-2 text-base text-foreground">
               <li className="flex items-start gap-2">
                 <span className="text-accent-foreground mt-1"> <BicepsFlexed className="w-5 h-5"/></span>
-                <span className="translate-y-[3px]"> I love going to the gym, almost about to reach 225lbs bench and 315lbs deadlift. </span>
+                <span className="translate-y-[3px]"> I love hitting the gym, I am almost at a 225 lb bench and 315 lb deadlift. </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-accent-foreground mt-1"> <Book className="w-5 h-5"/></span>
-                <span className="translate-y-[3px]"> I recently picked up reading books again, currently reading the Dune series. </span>
+                <span className="translate-y-[3px]"> I've also recently gotten back into reading, and I'm currently diving into the Dune series. </span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-accent-foreground mt-1"> <Bike className="w-5 h-5"/></span>
-                <span className="translate-y-[2px]"> Snowboarding, sky diving, jet skiing, surfing and getting a motor cycle license are some of things in my bucket list I want to be able to do . </span>
+                <span className="translate-y-[2px]"> I've always wanted to try snowboarding, skydiving, jet skiing, and surfing — and getting my motorcycle license is definitely on the list too! </span>
               </li>
             </ul>
           </div>
