@@ -161,20 +161,20 @@ function About() {
           <div className="bg-accent/5 border-l border-t border-border p-6 ">
             <h3 className="text-lg font-semibold text-accent-foreground mb-3 flex items-center gap-2">
               {/* <Heart className="w-5 h-5" /> */}
-              Interests
+              Hobbies
             </h3>
             <ul className="space-y-2 text-sm text-foreground">
               <li className="flex items-start gap-2">
                 <span className="text-accent-foreground mt-1">•</span>
-                <span>Computational Biology</span>
+                <span></span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-accent-foreground mt-1">•</span>
-                <span>Mathematical Modeling</span>
+                <span></span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-accent-foreground mt-1">•</span>
-                <span>Computer Simulations</span>
+                <span></span>
               </li>
             </ul>
           </div>
