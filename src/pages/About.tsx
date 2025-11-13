@@ -83,7 +83,7 @@ function About() {
             <p className="text-sm font-medium text-foreground">Stony Brook University</p>
             <p className="text-xs text-foreground mt-1">B.S. Applied Mathematics</p>
             <p className="text-xs text-foreground">B.S. Computer Science</p>
-            <p className="text-xs text-accent-foreground font-medium mt-2">Class of 2024</p>
+            <p className="text-xs text-accent-foreground font-medium mt-2">Class of 2025</p>
           </div>
 
           {/* Skills */}
