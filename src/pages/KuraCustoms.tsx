@@ -228,10 +228,10 @@ export default function KuraCustomsPortfolio() {
           A full-stack e-commerce platform built with Next.js and hosted on Vercel to share our hobby lego figurines with others!
         </p>
         <div className="flex gap-4 mt-8">
-          <a href="https://kuracustoms.com" target="_blank" className="px-6 py-3 rounded-xl bg-primary text-primary-foreground shadow-lg hover:opacity-90 transition">
+          <a href="https://kuracustoms.com" target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-xl bg-primary text-primary-foreground shadow-lg hover:opacity-90 transition">
             Visit our Site
           </a>
-          <a href="https://www.instagram.com/kuracustoms/" className="px-6 py-3 rounded-xl border shadow hover:bg-accent transition">
+          <a href="https://www.instagram.com/kuracustoms/" target="_blank" rel="noopener noreferrer" className="px-6 py-3 rounded-xl border shadow hover:bg-accent transition">
             Follow on Instagram
           </a>
         </div>
