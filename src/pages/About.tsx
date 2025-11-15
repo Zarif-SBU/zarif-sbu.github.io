@@ -66,7 +66,7 @@ function About() {
         <div className="max-w-352 mx-auto">
         <div className="bg-accent/10 border-l-4 border-accent px-3 py-2 rounded-r shadow-sm flex-shrink-0 mb-2">
           <p className="text-base font-medium text-accent-foreground">
-           👷🚧 Portfolio still in progress but feel free to explore!
+           👷🚧 Portfolio still in progress but feel free to look through!
           </p>
         </div>        
         <h1 className="text-3xl font-bold mb-4 text-foreground">About Me</h1>
