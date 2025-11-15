@@ -167,7 +167,7 @@ function About() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-accent-foreground mt-1"> <Bike className="w-5 h-5"/></span>
-                <span className="translate-y-[2px]"> I've always wanted to try snowboarding, skydiving, jet skiing, and surfing — and getting my motorcycle license is definitely on the list too! </span>
+                <span className="translate-y-[2px]"> I've always wanted to try snowboarding, skydiving, jet skiing, and surfing — and getting a motorcycle and pilots license is definitely on my bucket list too! </span>
               </li>
             </ul>
           </div>
