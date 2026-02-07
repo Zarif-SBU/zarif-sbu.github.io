@@ -221,7 +221,7 @@ export default function KuraCustoms() {
   return (
     <div className="flex flex-col w-full min-h-screen text-foreground bg-background animate-fadeIn">
       {/* Top Banner */}
-      <section className="w-full py-10 px-6 md:px-16 flex flex-col items-center text-center mb-20">
+      <section className="bg-linear-to-b from-accent/30 to-accent/10 w-full h-screen py-10 px-6 md:px-16 flex flex-col items-center text-center mb-20">
         <img src="/realKuraLogo.png" alt="Kura Customs Logo" className="h-75 opacity-90 mb-18"/>
         <h1 className="text-5xl font-bold mb-2">Kura Customs</h1>
         <p className="text-lg max-w-2xl opacity-90">
