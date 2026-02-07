@@ -1,181 +1,182 @@
 import { useState } from "react";
 import { LinkedinIcon, Github, Mail, Code2, GraduationCap, Briefcase, SquareCheckBig, BicepsFlexed, Book, Bike } from "lucide-react";
-
 import { Badge } from "@/components/ui/badge";
-
-function About() {
+export default function PortfolioLandingPage() {
   const [copied, setCopied] = useState(false);
 
   const onMailClick = () => {
     navigator.clipboard.writeText("zarifahnaf1@gmail.com")
-    .then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    })
-  }
-
-  const skills = {
-    languages: ["Python", "TypeScript", "JavaScript", "R", "C++", "Java"],
-    data: ["Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Matplotlib"],
-    web: ["React", "Node.js", "MongoDB", "Tailwind CSS", "D3.js"]
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      });
   };
+
+  const skills = [
+    { name: "Python", level: 90 },
+    { name: "JavaScript / TypeScript", level: 85 },
+    { name: "React / Node.js", level: 80 },
+    { name: "Data Science & ML", level: 75 },
+    { name: "C++ / Java", level: 70 },
+  ];
+
   return (
-    <div className="flex h-full md:h-auto animate-fadeIn">
-      {/* Left section */}
-      <div className="hidden md:flex md:sticky md:top-24 md:h-[calc(100vh-6rem)] flex-col items-center justify-start w-1/5 bg-accent/5 border-r border-border pt-8 pb-6 px-6 overflow-y-auto">
-        <div className="w-56 h-64 bg-accent rounded-md"></div>
-        <p className="mt-4 text-foreground text-lg font-semibold">Zarif Ahmed</p>
-        <p className="text-muted-foreground text-base text-center mb-3">Researcher at PoliTech and Co-founder of Kura Customs</p>
-        {/* Social media links underline the texts */}
-        <a
-          target="_blank" 
-          rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/ahmedzarif"
-          className="flex items-center gap-2 text-foreground hover:text-accent-foreground transition-colors text-lg font-medium group"
-        >
-          <LinkedinIcon className="w-5 h-5 group-hover:scale-120 transition-transform" />
-          <span className="underline translate-y-[1.5px]">LinkedIn</span>
-        </a>
-        <a 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          href="https://github.com/Zarif-SBU" 
-          className="flex items-center gap-2 text-foreground hover:text-accent-foreground transition-colors text-lg font-medium group "
-        >
-          <Github className="w-5 h-5 group-hover:scale-120 transition-transform" />
-          <span className="underline translate-y-[1.5px] ">GitHub</span>
-        </a>
-        <button 
-          onClick={onMailClick} 
-          className="relative flex items-center gap-2 text-foreground hover:text-accent-foreground transition-colors text-lg font-medium group cursor-pointer"
-        >
-          <Mail className="w-5 h-5 group-hover:scale-120 transition-transform" />
-          <span className="underline translate-y-[1.5px]">zarifahnaf1@gmail.com</span>
-          {copied && (
-            <span className="pointer-events-none absolute left-full ml-2 top-1/2 -translate-y-1/2 
-                  text-secondary-foreground bg-secondary rounded-md
-                  px-3 py-1 border text-sm font-medium shadow-lg animate-in fade-in slide-in-from-left-2 duration-200">
-              Copied!
-            </span>
-          )}
-        </button>
-      </div>
+    <div className="font-sans text-foreground">
+      <section className="relative min-h-screen bg-linear-to-b from-accent/30 to-accent/10">
+        <div className="grid min-h-screen place-items-center px-6 pb-24">
+          <div className="mx-auto w-full max-w-3xl text-center">
+            <img src="/headshot/profile.png" alt="Profile Picture" className="mx-auto mb-6 lg:h-80 lg:w-80 sm:h-48 sm:w-48 md:h-60 md:w-60 rounded-full object-cover border-4 border-accent"/>
+            <h1 className="mb-4 font-bold leading-tight text-4xl sm:text-5xl md:text-6xl">
+              Hi, I'm Zarif Ahmed!
+            </h1>
+            <p className="mx-auto mb-8 max-w-2xl text-base sm:text-lg md:text-xl text-muted-foreground">
+              Recent Applied Mathematics & Computer Science Graduate | Data Scientist | Software Engineer
+            </p>
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+              <button onClick={onMailClick} className=" relative flex items-center gap-2 rounded-lg border border-accent px-4 py-2 text-sm sm:text-base transition hover:bg-accent hover:text-accent-foreground">
+                <Mail className="h-5 w-5" />
+                zarifahnaf1@gmail.com
+                {copied && (<span className="absolute left-1/2 top-full mt-2 -translate-x-1/2 rounded-md bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground shadow-lg animate-in fade-in slide-in-from-top-1">
+                    Copied!
+                  </span>
+                )}
+              </button>
 
-      {/* Right section (content) */}
-      <main className="flex-1 pt-6 px-6 overflow-y-auto animate-fadeIn">
-        <div className="max-w-352 mx-auto">
-        <div className="bg-accent/10 border-l-4 border-accent px-3 py-2 rounded-r shadow-sm flex-shrink-0 mb-2">
-          <p className="text-base font-medium text-accent-foreground">
-           👷🚧 Portfolio still in progress but feel free to look through!
-          </p>
-        </div>        
-        <h1 className="text-3xl font-bold mb-4 text-foreground">About Me</h1>
-        <p className="text-base leading-relaxed text-foreground mb-4">
-          Hello! I'm Zarif, a recent graduate from Stony Brook University who majored in both Applied Mathematics and Computer Science. I have a strong passion for problem-solving and coding, which drove me to pursue a career in data science and software engineering. As I continued my acedemic journey I found an appreciation for using Computer simulations and Mathematical models to solve complex biological problems. With that interest, 
-          I aspire to persue a master's in computational biology or a related field in the future.
-        </p>
-       {/* 2x2 Grid Section */}
-        <div className="grid grid-cols-1 md:grid-cols-2 pb-1">
-          {/* Education */}
-          <div className="bg-accent/5 border-border px-6 pt-4">
-            <h3 className="text-xl font-semibold text-accent-foreground mb-3 flex items-center gap-2 border-b">
-              <GraduationCap className="w-6 h-6" />
-              Education
-            </h3>
-            <p className="text-lg font-bold text-foreground">Stony Brook University</p>
-            <p className="text-base text-foreground mt-1">B.S. Applied Mathematics</p>
-            <p className="text-base text-foreground">B.S. Computer Science</p>
-            <p className="text-base text-accent-foreground font-medium mt-2">Class of 2025</p>
-          </div>
+              <a href="https://www.linkedin.com/in/ahmedzarif" target="_blank" rel="noopener noreferrer" className=" flex items-center gap-2 rounded-lg border border-accent px-4 py-2 text-sm sm:text-base transition hover:bg-accent hover:text-accent-foreground">
+                <LinkedinIcon className="h-5 w-5" />
+                LinkedIn
+              </a>
 
-          {/* Skills */}
-          <div className="bg-accent/5 border-border px-6 pt-4">
-            <h3 className="text-xl font-semibold text-accent-foreground mb-3 flex items-center gap-2 border-b">
-              <Code2 className="w-5 h-5" />
-              Skills & Technologies
-            </h3>
-            <div className="space-y-2">
-              <div>
-                <h4 className="text-base font-semibold text-foreground mb-1">Languages</h4>
-                <div className="flex flex-wrap gap-1">
-                  {skills.languages.map((skill) => (
-                    <Badge key={skill} variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h4 className="text-base font-semibold text-foreground mb-1">Data Science & ML</h4>
-                <div className="flex flex-wrap gap-1">
-                  {skills.data.map((skill) => (
-                    <Badge key={skill} variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <h4 className="text-base font-semibold text-foreground mb-1">Web Development</h4>
-                <div className="flex flex-wrap gap-1">
-                  {skills.web.map((skill) => (
-                    <Badge key={skill} variant="outline" className="px-2 py-0.5 bg-accent/20 text-foreground text-xs rounded-md border border-accent/30 font-medium">
-                      {skill}
-                    </Badge>
-                  ))}
-                </div>
-              </div>
+              <a href="https://github.com/Zarif-SBU" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 rounded-lg border border-accent px-4 py-2 text-sm sm:text-base transition hover:bg-accent hover:text-accent-foreground">
+                <Github className="h-5 w-5" />
+                GitHub
+              </a>
             </div>
           </div>
+        </div>
 
-          {/* Current */}
-          <div className="bg-accent/5 border-border px-6 pt-4 ">
-            <h3 className="text-xl font-semibold text-accent-foreground mb-3 flex items-center gap-2 border-b">
-              <Briefcase className="w-5 h-5" />
-              Current
-            </h3>
-            <ul className="space-y-2 text-base text-foreground">
-              <li className="flex items-start gap-2">
-                <span className="text-accent-foreground mt-1">•</span>
-                <span className="translate-y-[3.5px]">Researcher at PoliTech building our data repository and data visualization tools.</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-accent-foreground mt-1">•</span>
-                <span className="translate-y-[4px]">Co-founder of Kura Customs an e-commerce project built alongside my friends!</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-accent-foreground mt-1">•</span>
-                <span className="translate-y-[4px]">Activly looking for opportunities in data science and software engineering.</span>
-              </li>
-            </ul>
-          </div>
+        {/* Scroll indicator */}
+        <div className="pointer-events-none absolute bottom-6 border-accent-foreground/70 border-2 px-2.5 left-1/2 -translate-x-1/2 animate-bounce rounded">
+          <span className="block text-3xl text-accent-foreground/70">
+            ⬇
+          </span>
+        </div>
+      </section>
 
-          {/* Hobbies */}
-          <div className="bg-accent/5 border-border px-6 pt-4 ">
-            <h3 className="text-xl font-semibold text-accent-foreground mb-3 flex items-center gap-2 border-b">
-              <SquareCheckBig className="w-5 h-5" />
-              Hobbies and Interests
+
+      {/* About Me */}
+      <section id="about" className="bg-accent/20 w-full ">
+        <div className="max-w-5xl mx-auto px-6 py-16">
+          <h2 className="text-4xl font-bold mb-6 text-center md:text-left">About Me</h2>
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground text-center md:text-left">
+            Hello! I'm Zarif, a recent graduate from Stony Brook University with dual degrees in Applied Mathematics and Computer Science. 
+            I enjoy solving complex problems through coding, simulations, and mathematical models. 
+          My goal is to apply these skills in data science and software engineering, and I aspire to pursue a master's in computational biology in the future.
+          </p>
+        </div>
+      </section>
+      
+      {/* Education */}
+      <section className=" py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-4xl font-bold mb-8 text-center md:text-left">
+            Education
+          </h2>
+
+          <div className="bg-accent/5 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 className="flex items-center gap-2 text-xl font-semibold text-accent-foreground mb-2">
+              <GraduationCap className="w-5 h-5" />
+              Stony Brook University
             </h3>
-            <ul className="space-y-2 text-base text-foreground">
-              <li className="flex items-start gap-2">
-                <span className="text-accent-foreground mt-1"> <BicepsFlexed className="w-5 h-5"/></span>
-                <span className="translate-y-[3px]"> I love hitting the gym, I am almost at a 225 lb bench and 315 lb deadlift. </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-accent-foreground mt-1"> <Book className="w-5 h-5"/></span>
-                <span className="translate-y-[3px]"> I've also recently gotten back into reading, and I'm currently diving into the Dune series. </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-accent-foreground mt-1"> <Bike className="w-5 h-5"/></span>
-                <span className="translate-y-[2px]"> I've always wanted to try snowboarding, skydiving, jet skiing, and surfing — and getting a motorcycle and pilots license is definitely on my bucket list too! </span>
-              </li>
-            </ul>
+            <p className="text-muted-foreground mb-1"> B.S. Applied Mathematics </p>
+            <p className="text-muted-foreground mb-1"> B.S. Computer Science </p>
+            <p className="text-sm text-muted-foreground mt-2"> Graduated May 2025 </p>
+            <Badge className="mt-3">GPA: 3.47</Badge>
           </div>
         </div>
-      </div>
-      </main>
+      </section>
+
+      {/* Skills */}
+      <section className="bg-accent/20 py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-4xl font-bold mb-8 text-center md:text-left"> Skills </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-accent/5 p-6 rounded-lg shadow">
+              <h3 className="font-semibold mb-2">Languages</h3>
+              <p className="text-muted-foreground">
+                Python, Matlab, R JavaScript, TypeScript
+              </p>
+            </div>
+            <div className="bg-accent/5 p-6 rounded-lg shadow">
+              <h3 className="font-semibold mb-2">Frontend</h3>
+              <p className="text-muted-foreground">
+                React, Next.js, Tailwind CSS
+              </p>
+            </div>
+            <div className="bg-accent/5 p-6 rounded-lg shadow">
+              <h3 className="font-semibold mb-2">Backend</h3>
+              <p className="text-muted-foreground">
+                Node.js, Prisma, PostgreSQL, MongoDB
+              </p>
+            </div>
+            <div className="bg-accent/5 p-6 rounded-lg shadow">
+              <h3 className="font-semibold mb-2">Data / Other</h3>
+              <p className="text-muted-foreground">
+                Pandas, Numpy, Scikit-learn, Matplotlib, GeoPandas, Chart.js
+              </p>
+            </div>
+            <div className="bg-accent/5 p-6 rounded-lg shadow md:col-span-2">
+              <h3 className="font-semibold mb-2">Tools</h3>
+              <p className="text-muted-foreground">
+                Git, DigitalOcean, Vercel, LaTeX, Apache, Nginx
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Current Projects / Experience */}
+      <section className="max-w-5xl mx-auto px-6 py-16">
+        <h2 className="text-4xl font-bold mb-8 text-center md:text-left">Experience & Projects</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-accent/5 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 className="flex items-center gap-2 text-xl font-semibold text-accent-foreground mb-3">
+              <Briefcase className="w-5 h-5" /> Researcher @ PoliTech
+            </h3>
+            <p>Developing a data repository and building interactive data visualization tools for research projects.</p>
+          </div>
+          <div className="bg-accent/5 p-6 rounded-lg shadow hover:shadow-lg transition">
+            <h3 className="flex items-center gap-2 text-xl font-semibold text-accent-foreground mb-3">
+              <Briefcase className="w-5 h-5" /> Co-founder @ Kura Customs
+            </h3>
+            <p>Worked on an e-commerce platform with friends, handling front-end, back-end, and data management.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Hobbies & Interests */}
+      <section className="bg-accent/20 py-16">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="text-4xl font-bold mb-8 text-center md:text-left">Hobbies & Interests</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-accent/5 p-6 rounded-lg text-center shadow hover:shadow-lg transition">
+              <BicepsFlexed className="w-10 h-10 mx-auto mb-3 text-accent-foreground"/>
+              <h4 className="font-semibold mb-2">Gym & Fitness</h4>
+              <p>225 lb bench press, 315 lb deadlift, staying strong and active!</p>
+            </div>
+            <div className="bg-accent/5 p-6 rounded-lg text-center shadow hover:shadow-lg transition">
+              <Book className="w-10 h-10 mx-auto mb-3 text-accent-foreground"/>
+              <h4 className="font-semibold mb-2">Reading</h4>
+              <p>Exploring classic and modern literature; currently diving into the Dune series.</p>
+            </div>
+            <div className="bg-accent/5 p-6 rounded-lg text-center shadow hover:shadow-lg transition">
+              <Bike className="w-10 h-10 mx-auto mb-3 text-accent-foreground"/>
+              <h4 className="font-semibold mb-2">Adventure</h4>
+              <p>Bucket list includes snowboarding, skydiving, jet skiing, motorcycles, and pilot license!</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
-
-export default About;

@@ -217,13 +217,13 @@
 // import React from "react";
 
 
-export default function KuraCustomsPortfolio() {
+export default function KuraCustoms() {
   return (
     <div className="flex flex-col w-full min-h-screen text-foreground bg-background animate-fadeIn">
       {/* Top Banner */}
-      <section className="w-full py-10 px-6 md:px-16 flex flex-col items-center text-center">
-        <img src="/realKuraLogo.png" alt="Kura Customs Logo" className="h-50 mb-6 opacity-90"/>
-        <h1 className="text-5xl font-bold mb-4">Kura Customs</h1>
+      <section className="w-full py-10 px-6 md:px-16 flex flex-col items-center text-center mb-20">
+        <img src="/realKuraLogo.png" alt="Kura Customs Logo" className="h-75 opacity-90 mb-18"/>
+        <h1 className="text-5xl font-bold mb-2">Kura Customs</h1>
         <p className="text-lg max-w-2xl opacity-90">
           A full-stack e-commerce platform built with Next.js and hosted on Vercel to share our hobby lego figurines with others!
         </p>
@@ -249,7 +249,7 @@ export default function KuraCustomsPortfolio() {
           </div>
           <div className="p-6 rounded-2xl bg-accent/20 shadow-md hover:shadow-lg transition">
             <h3 className="text-2xl font-bold mb-3">Impact</h3>
-            <p className="opacity-80">Site recieved 500+ unique visitors since release on October 10th with 30+ orders made.</p>
+            <p className="opacity-80">Site recieved 500+ unique visitors and 30+ orders made since release on October 10th.</p>
           </div>
       </section>
 
