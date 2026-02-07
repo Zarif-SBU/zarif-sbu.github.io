@@ -1,24 +1,24 @@
 import { Gavel } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+// import { Badge } from "@/components/ui/badge";
 import { Comparison, ComparisonHandle, ComparisonItem } from '@/components/ui/shadcn-io/comparison';
-import { Github, Link2 } from "lucide-react";
+// import { Github, Link2 } from "lucide-react";
 
 // import GuidedWithFull from "@/components/ui/guidedwithfull";
 // import { cn } from "../lib/utils";
 import Carousel_Wrapper from "@/components/layout/carousel_wrapper";
 
 function Research() {
-  const techStack = [
-    "Vite",
-    "React.js",
-    "MongoDB",
-    "Leaflet.js",
-    "D3.js",
-    "Charts.js",
-    "Tailwind CSS",
-    "GeoPandas",
-    "Maup"
-  ];
+  // const techStack = [
+  //   "Vite",
+  //   "React.js",
+  //   "MongoDB",
+  //   "Leaflet.js",
+  //   "D3.js",
+  //   "Charts.js",
+  //   "Tailwind CSS",
+  //   "GeoPandas",
+  //   "Maup"
+  // ];
 
   return (
     <div className="flex flex-col bg-background text-foreground min-h-screen animate-fadeIn">

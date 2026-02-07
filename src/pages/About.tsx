@@ -15,8 +15,13 @@ export default function PortfolioLandingPage() {
   return (
     <div className="font-sans text-foreground">
       <section className="relative min-h-screen bg-linear-to-b from-accent/30 to-accent/10">
-        <div className="grid min-h-screen place-items-center px-6 pb-24">
+        <div className="grid min-h-screen place-items-center px-6 pb-24"> 
           <div className="mx-auto w-full max-w-3xl text-center">
+        <div className="bg-accent/10 border-l-4 border-accent px-3 py-2 rounded-r shadow-sm flex-shrink-0 mb-2">
+          <p className="text-base font-medium text-accent-foreground">
+           👷🚧 Portfolio still work in progress but feel free to look through!
+          </p>
+        </div>  
             <img src="/headshot/profile.png" alt="Profile Picture" className="mx-auto mb-6 lg:h-80 lg:w-80 sm:h-48 sm:w-48 md:h-60 md:w-60 rounded-full object-cover border-4 border-accent"/>
             <h1 className="mb-4 font-bold leading-tight text-4xl sm:text-5xl md:text-6xl">
               Hi, I'm Zarif Ahmed!
