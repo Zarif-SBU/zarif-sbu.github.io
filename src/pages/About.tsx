@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { LinkedinIcon, Github, Mail, Code2, GraduationCap, Briefcase, SquareCheckBig, BicepsFlexed, Book, Bike } from "lucide-react";
+import { LinkedinIcon, Github, Mail, GraduationCap, Briefcase, BicepsFlexed, Book, Bike } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 export default function PortfolioLandingPage() {
   const [copied, setCopied] = useState(false);
@@ -11,14 +11,6 @@ export default function PortfolioLandingPage() {
         setTimeout(() => setCopied(false), 2000);
       });
   };
-
-  const skills = [
-    { name: "Python", level: 90 },
-    { name: "JavaScript / TypeScript", level: 85 },
-    { name: "React / Node.js", level: 80 },
-    { name: "Data Science & ML", level: 75 },
-    { name: "C++ / Java", level: 70 },
-  ];
 
   return (
     <div className="font-sans text-foreground">
